@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="/favicon.ico"/>
+    <title>Home</title>
+</head>
+<body>
+    <header><h1>Game Hub</h1></header>
+
+    <section class="games-list"><br>
+        <h2>All Games</h2><br>
+        <div class="game-card">
+            <img src="/imgs/retro-bowl.png" alt="Retro Bowl">
+            <h3>Retro Bowl v1.6.8.0 (Latest)</h3><br>
+            <button onclick="openBlank('/retro-bowl/')" class="play-button">Play</button>
+        </div>
+		<div class="game-card">
+			<img src="/imgs/geometry-dash.png" alt="Geometry Dash (Scratch)">
+            <h3>Geometry Dash (Scratch)</h3><br>
+            <button onclick="openBlank('/geometry-dash/')" class="play-button">Play</button>
+			<button id="downloadbutton" class="play-button">Download</button>
+        </div>
+		<div class="game-card">
+			<img src="/imgs/bitlife.png" alt="BitLife">
+            <h3>BitLife</h3><br>
+            <button onclick="openBlank('/bitlife/')" class="play-button">Play</button>
+        </div>
+		<div class="game-card">
+			<img src="/imgs/roblox.png" alt="Roblox">
+            <h3>Roblox</h3><br>
+            <button onclick="openBlank('https://cygg-ex3c.onrender.com/')" class="play-button">Play</button>
+        </div>
+        <!-- Add more game cards as needed -->
+    </section>
+	<script>
+	
+	document.getElementById('downloadbutton').addEventListener('click', function() {
+    const link = document.createElement('a');
+    link.href = '/geometry-dash/index.html'; // Replace with your file URL
+    link.download = 'geometry-dash.html'; // Specify the filename for download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+	
+function openBlank(url) {
+    var win = window.open();
+    win.document.body.style.margin = '0';
+    win.document.body.style.height = '100vh';
+	win.document.title = "Home";
+	var link = win.document.createElement('link');
+    link.rel = 'icon';
+    link.href = 'https://legends0flearning.github.io/favicon.ico';
+    win.document.head.appendChild(link);
+    var iframe = win.document.createElement('iframe');
+    iframe.style.border = 'none';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.margin = '0';
+    iframe.src = url;
+    win.document.body.appendChild(iframe);
+}
+</script>
+	</script>
+
+    <footer>
+        <p>&copy; All rights reserved to their proper 3rd parties.</p>
+    </footer>
+</body>
+</html>
