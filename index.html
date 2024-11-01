@@ -8,14 +8,18 @@
     <title>Home</title>
 </head>
 <body>
-    <header><h1>Game Hub</h1></header>
-
+    <header><h1>Game Hub</h1><p>Games added: Retro Bowl College | Games coming soon: Basketball Stars (Latest) and Basketball Legends (Latest) <p></header>
     <section class="games-list"><br>
         <h2>All Games</h2><br>
         <div class="game-card">
             <img src="/imgs/retro-bowl.png" alt="Retro Bowl">
             <h3>Retro Bowl v1.6.8.0 (Latest)</h3><br>
             <button onclick="openBlank('/retro-bowl/')" class="play-button">Play</button>
+        </div>
+		<div class="game-card">
+            <img src="/imgs/retro-bowl-college.png" alt="Retro Bowl College">
+            <h3>Retro Bowl College v0.9.8.0 (Latest)</h3><br>
+            <button onclick="openBlank('/retro-bowl-college/')" class="play-button">Play</button>
         </div>
 		<div class="game-card">
 			<img src="/imgs/geometry-dash.png" alt="Geometry Dash (Scratch)">
@@ -25,22 +29,19 @@
         </div>
 		<div class="game-card">
 			<img src="/imgs/bitlife.png" alt="BitLife">
-            <h3>BitLife</h3><br>
+            <h3>BitLife v1.0.0</h3><br>
             <button onclick="openBlank('/bitlife/')" class="play-button">Play</button>
         </div>
 		<div class="game-card">
 			<img src="/imgs/roblox.png" alt="Roblox">
-            <h3>Roblox</h3><br>
-            <button onclick="openBlank('https://dashboard-cq4z.onrender.com/')" class="play-button">Play</button>
+            <h3>Roblox (Broken)</h3><br>
         </div>
-        <!-- Add more game cards as needed -->
     </section>
 	<script>
-	
 	document.getElementById('downloadbutton').addEventListener('click', function() {
     const link = document.createElement('a');
-    link.href = '/geometry-dash/index.html'; // Replace with your file URL
-    link.download = 'geometry-dash.html'; // Specify the filename for download
+    link.href = '/geometry-dash/index.html';
+    link.download = 'geometry-dash.html';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
